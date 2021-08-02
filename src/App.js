@@ -1,81 +1,31 @@
 import "./index.scss";
+import Card from "./components/Card";
+import Header from "./components/Header";
+import Drawer from "./components/Drawer";
 
 function App() {
   return (
     <div className="wrapper">
-      <header>
-        <div className="headerLeft">
-          <img src="img/logo.png" width="40" height="40" alt="ss" />
-          <div className="headerInfo">
-            <h3 style={{ "text-transform": "uppercase" }}>React sneakers</h3>
-            <p>Магазин лучших кроссовок</p>
+      <Drawer/>
+      <Header/>
+
+      <div className="content">
+        <div
+          style={{
+            marginBottom: "40px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
+          <h1>Все кроссовки</h1>
+          <div className="search-block">
+            <img src="/img/search.svg" alt="Search" />
+            <input placeholder="Поиск..." />
           </div>
         </div>
-        <ul className="headerRight">
-          <li style={{ "margin-right": "30px" }}>
-            <img src="img/cart.svg" alt="ss" />
-            <span>1250 руб</span>
-          </li>
-          <li>
-            <img src="img/user.svg" alt="ss" />
-          </li>
-        </ul>
-      </header>
-      <div className="content">
-        <h1 style={{ "margin-bottom": "40px" }}>Все кроссовки</h1>
-        <div style={{ display: "flex" ,}}>
-          <div className="card">
-            <img src="img/sneakers/1.jpg" width="133" height="112" alt="ss" />
-            <h5>Мужские кроссовки Nike</h5>
-            <div className="cardBottom">
-              <div style={{ display: "flex", "flex-direction": "column" }}>
-                <span>Цена:</span>
-                <b>12 999 руб</b>
-              </div>
-              <button className="button">
-                <img src="img/plus.svg" width="11" height="11" alt="ss" />
-              </button>
-            </div>
-          </div>
-          <div className="card">
-            <img src="img/sneakers/2.jpg" width="133" height="112" alt="ss" />
-            <h5>Мужские кроссовки Nike</h5>
-            <div className="cardBottom">
-              <div style={{ display: "flex", "flex-direction": "column" }}>
-                <span>Цена:</span>
-                <b>12 999 руб</b>
-              </div>
-              <button className="button">
-                <img src="img/plus.svg" width="11" height="11" alt="ss" />
-              </button>
-            </div>
-          </div>
-          <div className="card">
-            <img src="img/sneakers/3.jpg" width="133" height="112" alt="ss" />
-            <h5>Мужские кроссовки Nike</h5>
-            <div className="cardBottom">
-              <div style={{ display: "flex", "flex-direction": "column" }}>
-                <span>Цена:</span>
-                <b>12 999 руб</b>
-              </div>
-              <button className="button">
-                <img src="img/plus.svg" width="11" height="11" alt="ss" />
-              </button>
-            </div>
-          </div>
-          <div className="card">
-            <img src="img/sneakers/4.jpg" width="133" height="112" alt="ss" />
-            <h5>Мужские кроссовки Nike</h5>
-            <div className="cardBottom">
-              <div style={{ display: "flex", "flex-direction": "column" }}>
-                <span>Цена:</span>
-                <b>12 999 руб</b>
-              </div>
-              <button className="button">
-                <img src="img/plus.svg" width="11" height="11" alt="ss" />
-              </button>
-            </div>
-          </div>
+        <div style={{ display: "flex" }}>
+          <Card />
         </div>
       </div>
     </div>
