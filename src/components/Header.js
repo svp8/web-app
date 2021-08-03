@@ -1,4 +1,4 @@
-function Header(){
+function Header(props){
 
 return(
     <header>
@@ -10,7 +10,7 @@ return(
           </div>
         </div>
         <ul className="headerRight">
-          <li style={{ marginRight: "30px" }}>
+          <li onClick={props.onClickCart} style={{ marginRight: "30px" ,cursor:"pointer"}}>
             <img src="img/cart.svg" alt="ss" />
             <span>1250 руб</span>
           </li>
